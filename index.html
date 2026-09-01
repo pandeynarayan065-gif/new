@@ -298,12 +298,14 @@ h3{font-size:16px;font-weight:700;letter-spacing:-.01em}
 .stotal b{font-size:17px}
 .spay{padding:18px 14px;background:var(--accsoft);text-align:center;border-top:1px solid #f7d3b6}
 
-.creator{display:flex;align-items:center;gap:12px;margin-top:16px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:12px 14px}
+.creator{display:flex;flex-direction:column;gap:12px;margin-top:16px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:12px 14px}
+.crow{display:flex;align-items:center;gap:12px}
+.clinks{display:flex;gap:8px}
 .pfp{width:52px;height:52px;border-radius:50%;object-fit:cover;flex:0 0 auto;border:2px solid var(--card);box-shadow:0 0 0 2px var(--acc)}
 .cmeta{flex:1;min-width:0;line-height:1.3}
 .cmeta b{display:block;font-size:15px;font-weight:800;letter-spacing:-.01em}
 .cmeta em{display:block;font-style:normal;font-size:11.5px;color:var(--mut);font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.cbtn{flex:0 0 auto;font-size:11.5px;font-weight:800;color:var(--acc);background:var(--accsoft);border:1px solid #f7d3b6;padding:6px 10px;border-radius:99px}
+.cbtn{flex:1;text-align:center;font-size:11.5px;font-weight:800;color:var(--acc);background:var(--accsoft);border:1px solid #f7d3b6;padding:8px 10px;border-radius:99px}
 .statrow{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px}
 .stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:11px 8px;text-align:center}
 .stat b{display:block;font-size:18px;font-weight:800;letter-spacing:-.02em;color:var(--acc)}
@@ -594,78 +596,6 @@ footer{padding:26px 0 34px;text-align:center;border-top:1px solid var(--line);ma
   </div>
 </section>
 
-<!-- ============ MONEY vs EVIDENCE ============ -->
-<section class="sec-line" id="waste">
-  <div class="wrap reveal">
-    <span class="eyebrow">The honest maths</span>
-    <h2>You're not underspending.<br>You're spending on the wrong things.</h2>
-    <p class="lead">
-      At ₹1000 a month — one oil, one shampoo, one "serum" — here's the next three years,
-      and what that money actually buys you.
-    </p>
-
-    <div class="burn" id="burn">
-      <div class="burn-top">
-        <span class="kicker">Money burned</span>
-        <span class="burn-mo"><b id="burnMo">0</b> months in</span>
-      </div>
-      <div class="burn-n" id="burnN">₹0</div>
-      <div class="burn-on" id="burnOn">nothing yet</div>
-
-      <div class="burn-track"><i id="burnBar"></i></div>
-      <div class="burn-scale"><span>today</span><span>18 months</span><span>3 years</span></div>
-
-      <div class="chips" id="burnChips">
-        <span class="bchip" data-at="6000" data-label="onion oil">Onion oil</span>
-        <span class="bchip" data-at="12000" data-label="bhringraj oil">Bhringraj oil</span>
-        <span class="bchip" data-at="18000" data-label="biotin gummies">Biotin gummies</span>
-        <span class="bchip" data-at="24000" data-label="anti-hairfall shampoo">Anti-hairfall shampoo</span>
-        <span class="bchip" data-at="30000" data-label="an ayurvedic regrowth kit">Ayurvedic regrowth kit</span>
-        <span class="bchip" data-at="36000" data-label="a rosemary serum">Rosemary serum</span>
-      </div>
-
-      <div class="burn-out">
-        <div class="vsrow">
-          <div class="vsbox"><div class="k">Three years of this</div><div class="v red">₹36,000</div></div>
-          <div class="vs">vs</div>
-          <div class="vsbox hi"><div class="k">Hair Recode</div><div class="v acc-t">₹899</div></div>
-        </div>
-        <p class="small" style="margin-top:12px">
-          Six products, and three years of runway you don't get back.
-        </p>
-        <button class="replay" id="burnReplay">↻ Run it again</button>
-      </div>
-    </div>
-
-    <p class="tbl-note" style="margin-top:18px">
-      The worst part: it costs <b class="red">more</b> than the stuff that actually works.
-    </p>
-
-    <div class="acc" data-acc>
-      <div class="ai">
-        <button class="ah">
-          <span class="anum">₹</span>
-          <span class="t">Look where you waste your money<em>5 products · ₹2,070 a month · almost no evidence</em></span>
-          <span class="chev">▼</span>
-        </button>
-        <div class="ab"><div class="wide">
-          <div class="tbl">
-            <div class="trow head"><div>Thing</div><div>Evidence</div><div class="cost">₹/mo</div></div>
-            <div class="trow"><div class="tname">Ayurvedic hair-fall oils &amp; kits<small>Onion · bhringraj · amla · "regrowth serum"</small></div><div class="ev none"><i></i><i></i><i></i><i></i><i></i></div><div class="cost">₹800</div></div>
-            <div class="trow"><div class="tname">Anti-hairfall shampoo<small>It cleans hair</small></div><div class="ev none"><i></i><i></i><i></i><i></i><i></i></div><div class="cost">₹300</div></div>
-            <div class="trow"><div class="tname">Biotin, if not deficient<small>Excreted in urine</small></div><div class="ev none"><i class="f"></i><i></i><i></i><i></i><i></i></div><div class="cost">₹500</div></div>
-            <div class="trow"><div class="tname">Onion juice<small>One 2002 study, never replicated</small></div><div class="ev none"><i class="f"></i><i></i><i></i><i></i><i></i></div><div class="cost">₹120</div></div>
-            <div class="trow"><div class="tname">Rosemary oil<small>One weak trial</small></div><div class="ev mid"><i class="f"></i><i class="f"></i><i></i><i></i><i></i></div><div class="cost">₹350</div></div>
-          </div>
-          <p class="small" style="margin-top:10px">
-            What actually works is a shorter list, and a cheaper one. That's the course.
-          </p>
-        </div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ============ AUDIT ============ -->
 <section class="sec-line" id="audit">
   <div class="wrap reveal">
@@ -740,6 +670,78 @@ footer{padding:26px 0 34px;text-align:center;border-top:1px solid var(--line);ma
       <p class="btn-sub">Indicative. Inside the course you do this properly, with photos I review.</p>
       </div>
      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MONEY vs EVIDENCE ============ -->
+<section class="sec-line" id="waste">
+  <div class="wrap reveal">
+    <span class="eyebrow">The honest maths</span>
+    <h2>You're not underspending.<br>You're spending on the wrong things.</h2>
+    <p class="lead">
+      At ₹1000 a month — one oil, one shampoo, one "serum" — here's the next three years,
+      and what that money actually buys you.
+    </p>
+
+    <div class="burn" id="burn">
+      <div class="burn-top">
+        <span class="kicker">Money burned</span>
+        <span class="burn-mo"><b id="burnMo">0</b> months in</span>
+      </div>
+      <div class="burn-n" id="burnN">₹0</div>
+      <div class="burn-on" id="burnOn">nothing yet</div>
+
+      <div class="burn-track"><i id="burnBar"></i></div>
+      <div class="burn-scale"><span>today</span><span>18 months</span><span>3 years</span></div>
+
+      <div class="chips" id="burnChips">
+        <span class="bchip" data-at="6000" data-label="onion oil">Onion oil</span>
+        <span class="bchip" data-at="12000" data-label="bhringraj oil">Bhringraj oil</span>
+        <span class="bchip" data-at="18000" data-label="biotin gummies">Biotin gummies</span>
+        <span class="bchip" data-at="24000" data-label="anti-hairfall shampoo">Anti-hairfall shampoo</span>
+        <span class="bchip" data-at="30000" data-label="an ayurvedic regrowth kit">Ayurvedic regrowth kit</span>
+        <span class="bchip" data-at="36000" data-label="a rosemary serum">Rosemary serum</span>
+      </div>
+
+      <div class="burn-out">
+        <div class="vsrow">
+          <div class="vsbox"><div class="k">Three years of this</div><div class="v red">₹36,000</div></div>
+          <div class="vs">vs</div>
+          <div class="vsbox hi"><div class="k">Hair Recode</div><div class="v acc-t">₹899</div></div>
+        </div>
+        <p class="small" style="margin-top:12px">
+          Six products, and three years of runway you don't get back.
+        </p>
+        <button class="replay" id="burnReplay">↻ Run it again</button>
+      </div>
+    </div>
+
+    <p class="tbl-note" style="margin-top:18px">
+      The worst part: it costs <b class="red">more</b> than the stuff that actually works.
+    </p>
+
+    <div class="acc" data-acc>
+      <div class="ai">
+        <button class="ah">
+          <span class="anum">₹</span>
+          <span class="t">Look where you waste your money<em>5 products · ₹2,070 a month · almost no evidence</em></span>
+          <span class="chev">▼</span>
+        </button>
+        <div class="ab"><div class="wide">
+          <div class="tbl">
+            <div class="trow head"><div>Thing</div><div>Evidence</div><div class="cost">₹/mo</div></div>
+            <div class="trow"><div class="tname">Ayurvedic hair-fall oils &amp; kits<small>Onion · bhringraj · amla · "regrowth serum"</small></div><div class="ev none"><i></i><i></i><i></i><i></i><i></i></div><div class="cost">₹800</div></div>
+            <div class="trow"><div class="tname">Anti-hairfall shampoo<small>It cleans hair</small></div><div class="ev none"><i></i><i></i><i></i><i></i><i></i></div><div class="cost">₹300</div></div>
+            <div class="trow"><div class="tname">Biotin, if not deficient<small>Excreted in urine</small></div><div class="ev none"><i class="f"></i><i></i><i></i><i></i><i></i></div><div class="cost">₹500</div></div>
+            <div class="trow"><div class="tname">Onion juice<small>One 2002 study, never replicated</small></div><div class="ev none"><i class="f"></i><i></i><i></i><i></i><i></i></div><div class="cost">₹120</div></div>
+            <div class="trow"><div class="tname">Rosemary oil<small>One weak trial</small></div><div class="ev mid"><i class="f"></i><i class="f"></i><i></i><i></i><i></i></div><div class="cost">₹350</div></div>
+          </div>
+          <p class="small" style="margin-top:10px">
+            What actually works is a shorter list, and a cheaper one. That's the course.
+          </p>
+        </div></div>
+      </div>
     </div>
   </div>
 </section>
@@ -897,14 +899,19 @@ footer{padding:26px 0 34px;text-align:center;border-top:1px solid var(--line);ma
     <span class="eyebrow">Who's teaching this</span>
     <h2>I didn't read about this. I lived it.</h2>
 
-    <a class="creator" href="https://www.youtube.com/@GauravPandey-np7us" target="_blank" rel="noopener">
-      <img class="pfp" src="channels4_profile.jpg" alt="Gaurav" width="160" height="160">
-      <span class="cmeta">
-        <b>Gaurav</b>
-        <em>Gauravvchic · @GauravPandey-np7us</em>
-      </span>
-      <span class="cbtn">YouTube ↗</span>
-    </a>
+    <div class="creator">
+      <div class="crow">
+        <img class="pfp" src="channels4_profile.jpg" alt="Gaurav" width="160" height="160">
+        <span class="cmeta">
+          <b>Gaurav</b>
+          <em>Gauravvchic · @GauravPandey-np7us</em>
+        </span>
+      </div>
+      <div class="clinks">
+        <a class="cbtn" href="https://www.youtube.com/@GauravPandey-np7us" target="_blank" rel="noopener">YouTube ↗</a>
+        <a class="cbtn" href="https://www.instagram.com/gauravvchic" target="_blank" rel="noopener">Instagram ↗</a>
+      </div>
+    </div>
 
     <p class="lead" style="margin-top:14px">
       I started losing hair young and did what everyone does: bought oils, changed shampoo every month,
